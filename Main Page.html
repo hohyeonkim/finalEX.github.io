@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Main Page </title>
+        <style>
+            *{margin:0; padding: 0;}
+            body {
+                background-image: url('background.jpg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            .font_center{text-align: center;}
+            h1 {
+                color: white;
+            }
+            #container{ 
+                width: 900px; height: 500px;
+                overflow:hidden;
+                
+            }
+            
+            #left_item{ 
+                float:left; width: 600px; height: 500px;
+                background-color: white;
+            }
+            #right_item{ 
+                float:right; width:300px; height: 500px; 
+                background-color:turquoise;
+            }
+            #bottom{ 
+                width:900px; height: 100px; 
+                background-color:steelblue;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function pwdcheck()
+            {
+                var pwd = 3381;
+                var input = document.getElementById("input");
+                
+                if(pwd != input.value)
+                    alert('비밀번호가 틀렸습니다.');
+                else
+                    location.href = 'secret.html';
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 class = "font_center"> 고양이에 관한 정보들 </h1>
+        <div id="container" class="article">
+            <div id="left_item">
+                <br>
+                <P> 고양이는 개와 더불어 오랜시간 전부터 인간의 반려동물로써 살게되었습니다.
+                    고양이를 인간이 키우는 것은 고대 이집트 벽화에 나올 정도로 매우 오래되었습니다.
+                    그 뒤로도 고양이는 다양한 이유로 인간과 함께 살아왔습니다.
+                </P><br><br>
+
+                <p> 자세한 내용을 보고 싶으시면 오른쪽의 각 항목을 클릭해주세요 </p>
+            </div>
+            <div id = "right_item">
+                <li><a href = '1page.html'> 고양이의 생태 </a></li>
+                <li><a href = '2page.html'> 고양이의 식성 </a></li>
+                <li><a href = '3page.html'> 고양이를 키울때 주의 할점 </a></li>
+                <li><a href = '4page.html'> 새끼 고양이를 입양했을시 </a></li>
+            </div>
+        </div>
+
+        <div id = "bottom" class= "end">
+            <p> 글 마지막 문단의 숫자를 보고와주세요 </p>
+            <p> password : <input type="password" maxlength="4" id = "input" value=""> </p>
+            <input type="button" value="비밀번호" onclick="pwdcheck()">
+        </div>
+    </body>
+</html>
